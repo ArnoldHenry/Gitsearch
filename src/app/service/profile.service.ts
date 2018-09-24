@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers} from '@angular/http';
 import { map } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
   private username:string;
-  private clientid = '2d1ff9a3204b774face2';
-  private clientsecret = '2274b56623bc11c5358758cc595fabcd59b13457';
 
   constructor(private http:Http) { 
     console.log("Service works");
@@ -16,12 +15,12 @@ export class ProfileService {
 
   }
   getProfileInfo(){
-    return this.http.get("https://api.github.com/users/"+this.username+"?client_id="+this.clientid+"&client_secret="+this.clientsecret)
+    return this.http.get("https://api.github.com/users/"+this.username+"?client_id="+environment.clientid+"&client_secret="+environment.clientsecret)
     .pipe(
     map(res => res.json()));
   }
   getProfileRepo(){
-    return this.http.get("https://api.github.com/users/"+this.username+"/repos?client_id="+this.clientid+"&client_secret="+this.clientsecret)
+    return this.http.get("https://api.github.com/users/"+this.username+"/repos?client_id="+environment.clientid+"&client_secret="+environment.clientsecret)
     .pipe(
     map(res => res.json()));
   }
