@@ -10,10 +10,14 @@ import { Profile } from 'selenium-webdriver/firefox';
 export class ProfileComponent implements OnInit {
   profile:any[];
   repos:any[];
-
+  username:string;
 
   constructor(private profileservice:ProfileService) {
-    this.profileservice.getProfileInfo().subscribe(profile =>{
+
+   }
+   findProfile(){
+     this.profileservice.updateProfile(this.username);
+     this.profileservice.getProfileInfo().subscribe(profile =>{
       console.log(profile);
       this.profile=profile;
       
@@ -23,7 +27,6 @@ export class ProfileComponent implements OnInit {
       this.repos = repos;
     })
    }
-
   ngOnInit() {
   }
 
