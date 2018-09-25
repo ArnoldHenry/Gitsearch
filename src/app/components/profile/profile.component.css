@@ -10,3 +10,13 @@ body{
     font-size: 15pt;
     font-weight: bold;
 }
+.label{
+    padding:5px;
+    margin:1%;
+}
+.suname{
+    width:500px;
+    margin-right: auto;
+    margin-left:auto;
+    margin-top:2%;
+}
