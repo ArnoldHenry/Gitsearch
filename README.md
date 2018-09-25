@@ -7,7 +7,7 @@ This is a GitWebSearch web application.Instructions are ;
 * Different information will be displayed and to view more just click the link on the right side of the page.
 ## Setup/Installation Requirements
 No installation needed just click the link below to view my website online
-[GitSearch](https://arnoldhenry.github.io/GitSearch/)
+[GitSearch](https://arnoldhenry.github.io/Gitsearch/)
 ## Known Bugs
 No bugs
 ## Technologies Used
