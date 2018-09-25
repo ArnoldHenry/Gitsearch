@@ -18,7 +18,7 @@
 <div class="container-flex titlecont">
   <h3>Github Search WebApp</h3>
 </div>
-<form action="" class="search-form">
+<form class="search-form">
   <div class="form-group">
     <input type="text" placeholder="Enter Github Username" class="form-control" [(ngModel)]="username" name="username" (keyup)="findProfile()">
   </div>
@@ -30,8 +30,7 @@
   <span *ngIf="profile.company">, works at {{ profile.company}}</span>
   {{profile.location}}
   </div>
-</div>
-</div>
+
   <div class="panel-body">
     <div class="row">
       <div class="col-sm-3">
@@ -56,19 +55,22 @@
           <p> <a href="profile.html_url" class="btn btn-success btn-sm" target="_blank">View profile on github</a></p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="col-sm-4 float-right">
       <div class="panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">Repos</h4>
-
-        </div>
-        <div class="panel-body" *ngFor let repo for repos>
+        </div>  
+      <div class="panel-body" *ngFor="let repo of repos">
           <p>
-            {{repo.name }} <a href="{{repo.html_url}}" class="btn btm-sm btm warning">View project on Github</a>
+            {{repo.name}}<a href="{{repo.html_url}}" class="btn btm-sm btm warning pull-right">View project on Github</a>
           </p>
+          <p>{{repo.description}}</p>
         </div>
-      </div>
-    </div>
+    </div>   
   </div>
-
+</div>
 </body>
 </html>
