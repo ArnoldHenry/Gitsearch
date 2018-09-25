@@ -53,16 +53,13 @@
             <span class="label label-info">{{profile.public_repos}} public_repos</span>
           </p>
           <p> <a href="profile.html_url" class="btn btn-success btn-sm" target="_blank">View profile on github</a></p>
-      
-
-  
 
 <div class="float-right">
       <div class="panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">Repos</h4>
         </div>  
-      <div class="panel-body" *ngFor="let repo of repos">
+      <div class="panel-body repoback" *ngFor="let repo of repos">
           <p>
             {{repo.name}}<a href="{{repo.html_url}}" class="btn btm-sm btm warning pull-right">View project on Github</a>
           </p>
